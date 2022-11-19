@@ -1,7 +1,8 @@
 import React from 'react';
 // //import Clock from './components/Clock';
 // import ClockList from './components/Clocklist';
-import Form from './components/Form';
+//import Form from './components/Form';
+import Form from './components/test';
 
 function App(){
  const serialNumber=[1,2,3,4];
