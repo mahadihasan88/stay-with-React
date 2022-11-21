@@ -1,25 +1,16 @@
 
 
 const scaleName={
-    c:'celsius',
-    f:'fahrenheit'
-     }
-export default function TemperatureInput ({scale,temperature,onTemperatureChange}){
+  c:'celsius',
+  f:'fahrenheit'
+}
+function TemperatureInput({scale,temperature,toTemperatureChange}){
 
-        return(
-         
-            <fieldset>
-            <legend>Enter Number in {scaleName[scale]} </legend>
-
-          <input type="text" value={temperature} onChange={(e)=>{
-            onTemperatureChange(e,scale);
-          }}></input>
-         
-          </fieldset>
-          
-        )
-   
-       
-    }
-    
-
+return(
+  <fieldset>
+    <legend>Enter your Input in {scaleName[scale]}</legend>
+<input type="text" value={temperature} onChange={(event)=>{toTemperatureChange(event,scale)}}></input>
+</fieldset>
+)
+}
+export default TemperatureInput;

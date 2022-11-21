@@ -1,9 +1,8 @@
-
-export default function BoilingVerdict({celsius=0}){
-if(celsius>=100){
-   return <p>Water would boil </p>
-}
-else{
-   return <p>Water would not boil </p>
-}
+export default function BoilingVerdict({temp}){
+   if(temp>=100){
+      return <p>Rich would cooked</p>
+   }
+   else{
+      return <p>Rich would not cooked</p>
+   }
 }
