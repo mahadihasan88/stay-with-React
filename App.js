@@ -1,22 +1,22 @@
-
-import ClickCounter from "./components/ClickCounter";
-import HoverCounter from "./components/HoverCounter";
+import React from "react";
 
 
-import Counter from "./components/Counter";
-function App(){
- 
-  return (
-    <div className="app">
-     
-     <Counter render={(count,countChangeEvent)=>
-     <ClickCounter count={count} countChangeEvent={countChangeEvent}/>}/>
+import Section from "./components/Section";
+
+class App extends React.Component{
    
-   <Counter render={(count,countChangeEvent)=>
-     <HoverCounter count={count} countChangeEvent={countChangeEvent}/>}/>
-
-    </div>
-
-  )
+  render(){
+  
+    return (
+      <div className="App">
+   
+          <Section/>
+        
+          
+      </div>
+    )
+  }
+    
+   
   }
 export default App;
