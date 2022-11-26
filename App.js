@@ -1,22 +1,16 @@
 import React from "react";
-
-
-import Section from "./components/Section";
+import Todo from "./components/Todo";
+//import TodoClass from './components/TodoClass'
 
 class App extends React.Component{
-   
   render(){
-  
-    return (
+    return(
       <div className="App">
+       <p></p>
+       <Todo/>
    
-          <Section/>
-        
-          
       </div>
     )
   }
-    
-   
-  }
+}
 export default App;
