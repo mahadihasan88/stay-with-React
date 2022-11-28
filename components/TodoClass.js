@@ -2,33 +2,27 @@ import React from 'react';
 
 class Todo extends React.Component {
     state = {
-        todo: '',
-        warning: null,
+     
+        count:1
     };
 
-    handleInput = (e) => {
-        const inputValue = e.target.value;
-        const warning = inputValue.includes('.js')
-            ? 'You need JavaScript skill to complete the task. Do you have it?'
-            : null;
-
-        this.setState({
-            todo: inputValue,
-            warning,
-        });
+   
+    incrementChange=()=>{
+        
+        this.setState((prevState)=>({count:prevState.count+1} ))
+        
     };
 
     render() {
-        const { todo, warning } = this.state;
+        const { count} = this.state;
 
         return (
             <div>
-                <p>{todo}</p>
-                <p>
-                    <textarea name="todo" value={todo} onChange={this.handleInput} />
-                </p>
+            
                 <hr/>
-                <h2>{warning || 'Good choice!'}</h2>
+                <button type='button' value={count} onClick={this.incrementChange}>
+                    Click {count} the button</button>
+                    <h1> {count} </h1>
             </div>
         );
     }

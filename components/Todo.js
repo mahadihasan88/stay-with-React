@@ -2,25 +2,39 @@ import { useState } from "react";
 
 function Todo(){
 
-    const [todo,setTodo]=useState('');
-    const [warning,setWarning]=useState(null);
+    const [todo,setTodo]=useState({
+        title:'',
+        description:''
+    });
     
-   const  toChangeState=(e)=>{
-    const inputValue=e.target.value;
-    
-    const Warning=inputValue.includes('HSTU')? 'HSTU is a  awesome  University':null;
-
-    setTodo(inputValue);
-     setWarning(Warning);
-
-    }
+ 
+  const {title,description}=todo;
 
 
     return (
         <div>
-            <p> {todo}</p>
-            <textarea  type="text"  value={todo} onChange={toChangeState} ></textarea>
-            <p>{ warning || 'Goodwork'}</p>
+            <p> {title}</p>
+           <p>
+           <input 
+           type="text"
+           value={title}
+           onChange={(e)=>
+            setTodo({
+                ...todo,
+                title:e.target.value
+            })}/>
+           </p>
+
+           <p>
+            <textarea name="todo"
+            value={description}
+            onChange={(e)=>
+                setTodo({
+                    ...todo, 
+                    
+                    description:e.target.value
+                })}/>
+           </p>
         </div>
     )
 }
