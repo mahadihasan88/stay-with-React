@@ -1,13 +1,15 @@
-import GetPost from "./components/GetPost";
-import GetPost2 from "./components/GetPost2";
+
+
+import LayoutComponentOne from "./components/LayoutComponentOne";
+import LayoutComponentTwo from "./components/LayoutComponentTwo";
 
 function App(){
  
 
     return(
         <div className="App">
-          {/* <GetPost/> */}
-          <GetPost2/>
+       <LayoutComponentOne/>
+       {/* <LayoutComponentTwo/> */}
         
 
         </div>
